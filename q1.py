@@ -48,11 +48,11 @@ def getMaxValue(node1, node2):
     val = 0
     if (node1.left and node2.right) or (node1.right and node2.left):
         val += 2**(BITS-1-node1.level)
-        max1 = getMaxValue(node1.right, node1.left)
+        max1 = getMaxValue(node1.right, node2.left)
         max2 = getMaxValue(node1.left, node2.right)
         val += max(max1, max2)
     else:
-        max1 = getMaxValue(node1.right, node1.right)
+        max1 = getMaxValue(node1.right, node2.right)
         max2 = getMaxValue(node1.left, node2.left)
         val += max(max1, max2)
     return val
@@ -61,4 +61,6 @@ def getMaxValue(node1, node2):
 
 
 # print('Answer: ' + str(question01([9, 7, 12, 2])))
+# print('Answer: ' + str(question01([2**15, 4])))
+
 
