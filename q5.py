@@ -9,7 +9,6 @@ def question05(allowedAllocations, totalValue):
   for n in allowedAllocations:
       nums[n] = 1
   for i in range(0, totalValue+1):
-      print(nums)
       for allocation in allowedAllocations:
           prevNum = i - allocation
           if prevNum > 0 and nums[prevNum] > 0:
