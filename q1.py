@@ -60,5 +60,5 @@ def getMaxValue(node1, node2):
 
 
 
-print('Answer: ' + str(question01([9, 7, 12, 2])))
+# print('Answer: ' + str(question01([9, 7, 12, 2])))
 
