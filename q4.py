@@ -11,9 +11,7 @@ def question04(rows, numberMachines):
     for machine in row:
       if machine == 'X':
         if list.size == numberMachines:
-            if bestTime == -1:
-                bestTime = accTime
-            elif accTime < bestTime:
+            if bestTime == -1 or accTime < bestTime:
                 bestTime = accTime
         accTime = 0
         list = LinkedList()
@@ -23,14 +21,14 @@ def question04(rows, numberMachines):
             list.insert(time)
             accTime += time
         else:
+            if bestTime == -1 or accTime < bestTime:
+                bestTime = accTime
             accTime -= list.first.value
             accTime += time
             list.delete()
             list.insert(time)
     if list.size == numberMachines:
-        if bestTime == -1:
-            bestTime = accTime
-        elif accTime < bestTime:
+        if bestTime == -1 or accTime < bestTime:
             bestTime = accTime
     accTime = 0
     list = LinkedList()
