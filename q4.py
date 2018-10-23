@@ -23,7 +23,7 @@ def question04(rows, numberMachines):
             list.insert(time)
             accTime += time
         else:
-            accTime -= list.first
+            accTime -= list.first.value
             accTime += time
             list.delete()
             list.insert(time)
