@@ -6,14 +6,14 @@ def question06(numServers, targetServer, times):
   # modify and then return the variable below
   sofar = times[0][:]
   for i in range(numServers):
-      times[i][0] = 9223372036854775807
+      times[i][0] = 9223372036854775807000000000000
   reached = set([0])
   reachedMins = {}
   reachedMinsInds = {}
   recalc = reached
   for iter in range(numServers-1):
       # print('Reached: ' + str(reached))
-      minMinValue = 9223372036854775807
+      minMinValue = 9223372036854775807000000000000000
       for r in recalc:
           minValue = min(times[r])
           minInd = times[r].index(minValue)
@@ -30,7 +30,7 @@ def question06(numServers, targetServer, times):
       sofar[minMinInd] = minMinValue
       reached.add(minMinInd)
       for i in range(numServers):
-          times[i][minMinInd] = 9223372036854775807
+          times[i][minMinInd] = 9223372036854775807000000000000
       for i in range(numServers):
           times[minMinInd][i] += sofar[minMinInd]
       if targetServer in reached:
