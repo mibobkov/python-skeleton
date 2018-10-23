@@ -9,7 +9,7 @@ def question01(portfolios):
   for port in portfolios:
       root.insert(port)
 
-  root.PrintTree('')
+  # root.PrintTree('')
   answer = getMaxValue(root, root)
   return answer
 
@@ -58,7 +58,7 @@ def getMaxValue(node1, node2):
     return val
 
 
-# print('Answer: ' + str(question01([31, 9, 7, 12])))
+print('Answer: ' + str(question01([31, 9, 7, 12])))
 # print('Answer: ' + str(question01([1, 9])))
 # print('Answer: ' + str(question01([2**15, 4])))
 # print('Answer: ' + str(question01([2**16-1, 9,1,4,2,1,6,467,657,45,674,567,456,745,674,5672,354,345,54366,34562,23455,23451,53425, 7, 12])))
