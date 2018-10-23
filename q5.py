@@ -9,11 +9,13 @@ def question05(allowedAllocations, totalValue):
   for n in allowedAllocations:
       nums[n] = 1
   for i in range(0, totalValue+1):
+      if nums[i] == -1:
+          continue
       for allocation in allowedAllocations:
-          prevNum = i - allocation
-          if prevNum > 0 and nums[prevNum] > 0:
-              if nums[i] == -1 or nums[i] > nums[prevNum] + 1:
-                  nums[i] = nums[prevNum] + 1
+          nextNum = i + allocation
+          if nextNum <= totalValue and (nums[nextNum] == -1 or nums[nextNum] > nums[i] + 1):
+              nums[nextNum] = nums[i]+1
+  print(nums)
   return nums[totalValue]
 
   # modify and then return the variable below
