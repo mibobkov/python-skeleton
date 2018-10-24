@@ -10,7 +10,7 @@ def question06(numServers, targetServer, times):
   reached = set([0])
   reachedMins = {}
   reachedMinsInds = {}
-  recalc = reached
+  recalc = set([0])
   for iter in range(numServers-1):
       # print('Reached: ' + str(reached))
       minMinValue = 9223372036854775807000000000000000
@@ -37,21 +37,21 @@ def question06(numServers, targetServer, times):
           return sofar[targetServer]
   return sofar[targetServer]
 
-# import time
-# import random
-# SIZE = 500
-# random.seed(42)
-# times = []
-# for i in range(SIZE):
-#     row = []
-#     for j in range(SIZE):
-#         if i == j:
-#             row.append(0)
-#         else:
-#             row.append(random.randint(1, 100))
-#     times.append(row)
-# start = time.time()
-# print(question06(SIZE,1,times))
-# end = time.time()
-# print(end-start)
+import time
+import random
+SIZE = 500
+random.seed(42)
+times = []
+for i in range(SIZE):
+    row = []
+    for j in range(SIZE):
+        if i == j:
+            row.append(0)
+        else:
+            row.append(random.randint(1, 100))
+    times.append(row)
+start = time.time()
+print(question06(SIZE,1,times))
+end = time.time()
+print(end-start)
 # #0.054
