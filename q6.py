@@ -37,21 +37,21 @@ def question06(numServers, targetServer, times):
           return sofar[targetServer]
   return sofar[targetServer]
 
-import time
-import random
-SIZE = 500
-random.seed(42)
-times = []
-for i in range(SIZE):
-    row = []
-    for j in range(SIZE):
-        if i == j:
-            row.append(0)
-        else:
-            row.append(random.randint(1, 100))
-    times.append(row)
-start = time.time()
-print(question06(SIZE,1,times))
-end = time.time()
-print(end-start)
+# import time
+# import random
+# SIZE = 1000
+# random.seed(42)
+# times = []
+# for i in range(SIZE):
+#     row = []
+#     for j in range(SIZE):
+#         if i == j:
+#             row.append(0)
+#         else:
+#             row.append(random.randint(1, 100))
+#     times.append(row)
+# start = time.time()
+# print(question06(SIZE,1,times))
+# end = time.time()
+# print(end-start)
 # #0.054
