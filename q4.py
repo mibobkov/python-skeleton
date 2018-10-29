@@ -24,7 +24,7 @@ def question04(rows, numberMachines):
         else:
             if bestTime == -1 or accTime < bestTime:
                 bestTime = accTime
-            accTime -= row[i-size]
+            accTime -= int(row[i-size])
             accTime += time
     if size == numberMachines:
         if bestTime == -1 or accTime < bestTime:
