@@ -1,6 +1,6 @@
 # ONLY EDIT FUNCTIONS MARKED CLEARLY FOR EDITING
 
-import numpy as np
+# import numpy as np
 
 def question05(allowedAllocations, totalValue):
   return q5alter(allowedAllocations, totalValue)
@@ -40,7 +40,7 @@ def q5helper(allowedAllocations, allocated, already, target):
 
 # import time
 # start = time.time()
-# print(question05([3, 4], 13))
+# print(question05([1, 3, 4], 12))
 # end = time.time()
 # print(end-start)
 # start = time.time()
